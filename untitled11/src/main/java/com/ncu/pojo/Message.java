@@ -1,0 +1,23 @@
+package com.ncu.pojo;
+
+public class Message {
+    //浏览器发送给服务端的数据
+    private String toName;
+    private  String message;
+
+    public String getToName() {
+        return toName;
+    }
+
+    public void setToName(String toName) {
+        this.toName = toName;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+}

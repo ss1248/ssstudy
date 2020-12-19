@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "微软雅黑";
+}
+
+.icon-xiugaiziliao:hover {
+    background: #cccccc;
+}
+
+.icon-lianxiren:hover {
+    background: #cccccc;
+}
+
+.icon-xiaoxi:hover {
+    background: #cccccc;
+}
+
+.icon-tianjia:hover {
+    background: #cccccc;
+}
+
+#heading:hover {
+
+}
+
+h4 {
+    font-weight: normal;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.header .icon {
+    margin-left: -150px;
+    margin-top: 100px;
+    display: inline-block;
+    font-size: 30px;
+    color: blue;
+    position: absolute;
+    left: 1344px;
+    top: 56px;
+}
+
+.header .icon-box {
+    font-size: 0;
+    position: relative;
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 250px;
+}
+
+.header .icon:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    border: 1px solid #fff;
+    animation: wave 3s 1s infinite linear;
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    border-radius: 50%;
+    background-clip: padding-box;
+    box-sizing: border-box;
+}
+
+.chatbar {
+    position: absolute;
+    top: 50px;
+    right: 350px;
+    bottom: 0;
+    display: none;
+    width: 300px;
+    background: #fff;
+}
+
+.chatbar-box {
+    position: relative;
+    height: 100%;
+}
+
+.chatbar-contacts {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    background: #fff;
+    height: 700px;
+    right: 584px;
+    border: 1px solid #0975c6;
+    z-index: 0;
+}
+
+.chatbar-messages {
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    width: 614px;
+    bottom: 0;
+    background: #f3f3f3;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.5s;
+    height: 700px;
+    border: 1px solid #0975c6;
+}
+
+
+.contacts-search-box {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+.contacts-search-box .search-text {
+    width: 100%;
+    height: 40px;
+    color: #999;
+    line-height: 40px;
+    padding-left: 48px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.contacts-search-box i {
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    color: #0073c6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.chatbar-contacts-uls {
+    position: absolute;
+    width: 100%;
+    top: 41px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.chatbar-contacts-uls li {
+    height: 60px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.chatbar-contacts-uls li:hover {
+    background: #f3f3f3;
+}
+
+.chatbar-contacts-uls li i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -12px;
+    color: #0073c6;
+    font-size: 24px;
+}
+
+.chatbar-contacts-uls li p {
+    height: 100%;
+    line-height: 40px;
+    padding-left: 60px;
+}
+
+.messages-title {
+    position: relative;
+    height: 80px;
+    background: #f3f3f3;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.messages-title i:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -14px;
+    font-size: 28px;
+    color: #0073c6;
+}
+
+.messages-title h4 {
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    padding-left: 56px;
+}
+
+.messages-title i.return-icon {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 20px;
+    color: #0073c6;
+    cursor: pointer;
+}
+
+.messages-text {
+    position: absolute;
+    top: 81px;
+    left: 0;
+    right: 0;
+    bottom: 174px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.messages-box {
+    position: absolute;
+    bottom: 60px;
+    left: 5%;
+    width: 90%;
+    height: 100px;
+    border: 1px solid #ccc;
+    background: #fff;
+    text-align: center;
+    z-index: 0;
+}
+
+.messages-box textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.messages-box input {
+    display: inline-block;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #0073c6;
+}
+
+.messages-text-lis {
+    padding: 10px 15px;
+}
+
+.messages-text-lis i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #a0d468;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.messages-text-lis .time {
+    font-size: 12px;
+    color: #999;
+    margin-left: 15px;
+    position: relative;
+    left: 180px;
+    top: 10px;
+}
+
+.messages-text-lis p {
+    position: relative;
+    width: 230px;
+    margin-top: -50px;
+    border-radius: 3px;
+    background-color: #a0d468;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 26px;
+    left: 262px;
+    word-wrap: break-word;
+}
+
+.messages-text-lis .op {
+    position: relative;
+    width: 230px;
+    margin-top: -45px;
+    border-radius: 3px;
+    background-color: #a0d468;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 26px;
+    left: 80px;
+}
+
+
+.message-tooltip {
+    position: absolute;
+    top: 650px;
+    left: 695px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #d8534f;
+    background: #fae5e5;
+    border: 1px solid #d8534f;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.message-tooltip:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid #d8534f;
+    border-bottom: 1px solid #d8534f;
+    transform: rotate(-45deg);
+    background: #fae5e5;
+    bottom: -6px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+#messagemanage {
+
+    position: absolute;
+    background: #dddddd;
+    right: -30px;
+    width: 614px;
+    height: 700px;
+    visibility: hidden;
+    border: 1px solid #0975c6;
+    z-index: 1;
+}
+
+.projectList {
+    padding-top: 20px;
+}
+
+.projectList .item {
+
+}
+
+.projectList .item .times {
+    background-color: #bbbbbb;
+    color: #ffffff;
+    height: 26px;
+    width: 150px;
+    text-align: center;
+    border-radius: 13px;
+    margin: 0 auto;
+}
+
+.projectList .item .content {
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.projectList .item .content .title {
+    display: block;
+    color: #444444;
+    font-size: 20px;
+    font-weight: 550;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+
+.projectList .item .content .textcontent {
+    margin-top: 10px;
+    height: 70px;
+    display: block;
+    color: #666666;
+    font-size: 16px;
+    text-indent: 2em;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.projectList .item .content .detail {
+    margin-top: 3px;
+    height: 20px;
+    position: relative;
+}
+
+.projectList .item .content .detail .lookdetail {
+    font-size: 14px;
+    line-height: 26px;
+    color: #666666;
+}
+
+.projectList .item .content .detail .rightIcon {
+    position: absolute;
+    top: 2px;
+}
+
+#friend-search {
+    position: absolute;
+    background: #dddddd;
+    width: 300px;
+    height: 700px;
+    margin: 0 auto;
+    visibility: hidden;
+    right: 584px;
+    border: 1px solid #0975c6;
+    z-index: 1;
+}
+
+.img {
+    position: relative;
+    width: 70px;
+    width: 70px;
+}
+
+.imgp {
+    position: relative;
+    width: 70px;
+    width: 70px;
+}
+
+.Content-Main {
+    display: none;
+    width: 400px;
+    height: 500px;
+    left: -583px;
+    top: 50px;
+    margin: auto;
+    border: none;
+    -webkit-border-radius: 5px;
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px #444;
+    color: #D3D3D3;
+    background: #9D9D9D;
+    z-index: 2;
+    position: absolute;
+}
+
+.Content-Other {
+    display: none;
+    width: 400px;
+    height: 500px;
+    left: -200px;
+    top: 50px;
+    margin: auto;
+    border: none;
+    -webkit-border-radius: 5px;
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px #444;
+    color: #6FB7B7;
+    background: #4F9D9D	;
+    z-index: 2;
+    position: absolute;
+}
+
+
+.Content-Main label {
+    display: block;
+    margin-top: 25px;
+}
+
+.Content-Other label {
+    display: block;
+    margin-top: 25px;
+}
+
+.Content-Main label > span {
+    width: 20%;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 26px;
+}
+
+.Content-Other label > span {
+    width: 20%;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 26px;
+}
+
+.Content-Main input[type="text"], .Content-Main input[type="email"], .Content-Main textarea {
+    height: 25px;
+    width: 220px;;
+    line-height: 15px;
+    padding: 5px 0px 5px 5px;
+    margin-right: 6px;
+    margin-top: 2px;
+    border: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    outline: 0 none;
+    background: #DFDFDF;
+    color: #525252;
+    margin-left: 10px;
+}
+
+.Content-Other input[type="text"], .Content-Other input[type="email"], .Content-Other textarea {
+    height: 25px;
+    width: 220px;;
+    line-height: 15px;
+    padding: 5px 0px 5px 5px;
+    margin-right: 6px;
+    margin-top: 2px;
+    border: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    outline: 0 none;
+    background: #DFDFDF;
+    color: #525252;
+    margin-left: 10px;
+}
+
+.Content-Main textarea {
+    height: 100px;
+    width: 220px;
+    padding: 5px 0px 0px 5px;
+}
+.Content-Other textarea {
+    height: 100px;
+    width: 220px;
+    padding: 5px 0px 0px 5px;
+}
+.Content-Main .button {
+    padding: 8px 24px 8px 24px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #585858;
+    background: #f6ff0a;
+}
+.Content-Other .button {
+    padding: 8px 24px 8px 24px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #585858;
+    background: #f6ff0a;
+}
+
+.Content-Main .button:hover {
+    color: #333;
+    background-color: #EBEBEB;
+}
+.Content-Other .button:hover {
+    color: #333;
+    background-color: #EBEBEB;
+}
